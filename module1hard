@@ -1,0 +1,19 @@
+
+# Данный список по условию в алфавитном порядке.
+grades = [[5,3,3,5,4] , [2,2,2,3] , [4,5,5,2] , [4,4,3] , [5,5,5,4,5]]
+# данное множество студентов 
+students = {'Johnny', 'Bilbo', 'Steven', 'Khendrik', 'Aaron'}
+# Можество преобразуем в список
+my_students = list(students)
+# Сортируем студентов по алфавиту
+alphabet_students = sorted(my_students)
+# Создаем словарь успеваемости 
+dist_students = {}
+# обьединяем два списка с ключём по имени в словарьвыше
+for i in range(len(alphabet_students)):
+	dict_students = dict(zip(alphabet_students  ,  grades))
+
+for k in alphabet_students:
+			s = dict_students.get(k)
+			m = sum(s)/len(s)
+			print(k ,' Успеваемость : ', s , ' Средний бал : ', m)
